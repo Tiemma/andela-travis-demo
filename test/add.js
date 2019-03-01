@@ -23,3 +23,9 @@ describe('Divide', () => {
         expect(divide(5, 1)).equals(5);
     })
 })
+
+describe('Environment specific', () => {
+    it('Divide two numbers together', () => {
+        expect(process.env.BLANK).equals('hello');
+    })
+})
