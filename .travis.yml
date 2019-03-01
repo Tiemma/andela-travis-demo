@@ -8,6 +8,7 @@ cache:
 env: 
   global:
   - PLACE=andela
+  - BLANK=hello
 script:
 - npm test
 - npm run coverage
