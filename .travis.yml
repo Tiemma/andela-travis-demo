@@ -5,10 +5,18 @@ node_js:
 cache:
   directories:
   - node_modules
-env: 
+env:
   global:
   - PLACE=andela
   - BLANK=hello
 script:
 - npm test
 - npm run coverage
+deploy:
+  provider: heroku
+  api_key:
+    secure: HGaLVgieloVwnpRhhpLXf7MQT7E86VJ3V/rQgmgl5zxGRoQQH9gokbZhk9V1ywn27tVcrUe8ZU80DaqzIu9OwcVIeMpczZAFmB22bAh4DZB8tb4tBmzSPB9rAv8sZWy8xl0JAN99ur8Wb/mb2fS5aK+KZHYpoUC7S1d/xFmNBJ8CixrC/6cfVEroNzBrsDahUDR9z9+XxsNkR5URCoK/mM6NEvjrAT+peTWCVCLV7kqTaR891jsDi+hkxOuzgRU7zChhxaCUxtixE0rFARXVAtvcRwy06SucCoI9Q81JtIsrAca/W7gP2s3MJxiLTESd/FEDPvujcP2Bl0BPKh2r7XBG3uKzbnLvsWNMUuLv6fyiz+bMlrhHzstJ0seu5R4IWykcLOEaH193w4fFBHcmDJOY7Z8Edhrfv73ranTbBZF8bU9pnXmFNSMKwngl6FZxabVAVwYbbVkDr47hU8mmICAacL4g0Nk3ZhtrFZAxVAyt9czfl919LfWcNzQSFk6ToVezNUCXUajTc+67b310R6XJHxy9BdpHN0Xlt3YFNmE38smySJeintV0npHNCpOzJQFVWeUAYutGfAy88jOWjto00x9QNVRv1pxtuM6NHGx+uHf9Y5Ocxh70sPJB1vNvA4rB5Mi7EUNhE85KWO8yUC1P/uzLTXUdqF8k2JxoQXc=
+  app: andela-travis-demo
+  on:
+    repo: Tiemma/andela-travis-demo
+    branch: master
