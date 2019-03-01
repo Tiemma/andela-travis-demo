@@ -1,0 +1,32 @@
+{
+  "name": "setup_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require babel-register",
+    "start": "node build/index.js",
+    "build": "babel src -d build",
+    "webpack-build": "ejjejej",
+    "coverage": "nyc npm test && npm run generate-lcov",
+    "generate-lcov": "nyc report --reporter=text-lcov --reporter=html > lcov.info"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/register": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.2.0",
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "mocha": "^6.0.2",
+    "mocha-lcov-reporter": "^1.3.0",
+    "nyc": "^13.3.0"
+  },
+  "dependencies": {}
+}
